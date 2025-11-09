@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lucía — Portfolio IA + Creatividad</title>
+  <meta name="description" content="Portfolio minimalista de proyectos de IA aplicada, creatividad, automatización y dirección de arte. 100% estático y desplegable gratis en GitHub Pages." />
+  <meta name="color-scheme" content="light dark" />
+  <!-- Open Graph básica -->
+  <meta property="og:title" content="Lucía — Portfolio IA + Creatividad" />
+  <meta property="og:description" content="Proyectos de IA aplicada, automatizaciones, vídeo/imagen y campañas con propósito." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og-image.png" />
+  <meta name="theme-color" content="#0f172a" />
+  <!-- Fuente libre (Inter) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f172a; /* slate-900 */
+      --text:#e5e7eb; /* gray-200 */
+      --muted:#94a3b8; /* slate-400 */
+      --card:#111827ee; /* gray-900 alpha */
+      --accent:#a3e635; /* lime-400 */
+      --accent-2:#38bdf8; /* sky-400 */
+      --ring:#22c55e; /* green-500 */
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+      background: radial-gradient(1200px 600px at 80% -10%,rgba(56,189,248,.15),transparent 60%),
+                  radial-gradient(900px 500px at -10% 10%,rgba(163,230,53,.12),transparent 60%),
+                  var(--bg);
+      color:var(--text);
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:1100px; margin:0 auto; padding:24px}
+    header{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 0}
+    .brand{display:flex; align-items:center; gap:12px}
+    .logo{width:44px; height:44px; border-radius:12px; background:linear-gradient(135deg,var(--accent),var(--accent-2)); box-shadow:var(--shadow)}
+    .title{font-weight:700; letter-spacing:.2px}
+    .nav{display:flex; gap:14px; flex-wrap:wrap}
+    .nav a{opacity:.9; padding:8px 12px; border-radius:10px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06)}
+    .hero{display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:center; padding:40px 0}
+    .kicker{color:var(--muted); font-weight:600; letter-spacing:.12em; text-transform:uppercase}
+    h1{font-size:clamp(28px,5vw,48px); margin:.2em 0 .4em}
+    .lead{color:#cbd5e1; font-size:1.05rem; line-height:1.7}
+    .cta{display:flex; gap:12px; margin-top:22px}
+    .btn{padding:12px 16px; border-radius:14px; font-weight:600; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.06); backdrop-filter:saturate(140%);}
+    .btn.primary{background:linear-gradient(135deg,rgba(163,230,53,.18),rgba(56,189,248,.18)); border-color:rgba(255,255,255,.2)}
+    .card-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px}
+    .card{border:1px solid rgba(255,255,255,.08); background:rgba(17,24,39,.75); border-radius:18px; padding:16px; box-shadow:var(--shadow); transition:transform .2s ease, border-color .2s ease}
+    .card:hover{transform:translateY(-3px); border-color:rgba(163,230,53,.35)}
+    .thumb{aspect-ratio:16/10; border-radius:12px; background:#0b1220; display:grid; place-items:center; color:#64748b; font-weight:600; margin-bottom:12px; border:1px dashed rgba(148,163,184,.25)}
+    .tag{display:inline-flex; align-items:center; gap:6px; padding:6px 10px; border-radius:999px; font-size:.8rem; color:#d1fae5; background:rgba(34,197,94,.12); border:1px solid rgba(34,197,94,.25)}
+    section{padding:28px 0}
+    h2{font-size:clamp(22px,3.6vw,32px); margin:0 0 12px}
+    .muted{color:var(--muted)}
+    footer{padding:40px 0; color:var(--muted); font-size:.9rem}
+    .grid-2{display:grid; grid-template-columns:1fr 1fr; gap:18px}
+    .input, textarea{width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.04); color:var(--text)}
+    .small{font-size:.9rem}
+    .sr{position:absolute;left:-9999px}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div class="title">Lucía López — IA + Creatividad</div>
+          <div class="small muted">Automatización · Imagen/Vídeo · Publicidad con propósito</div>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Secciones">
+        <a href="#proyectos">Proyectos</a>
+        <a href="#acerca">Acerca</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#cv">CV</a>
+      </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+      <div>
+        <div class="kicker">Portfolio 100% estático y gratuito</div>
+        <h1>IA con sentido humano: sistemas, imágenes y piezas que cuentan algo.</h1>
+        <p class="lead">Comparto proyectos donde la IA no es un truco, sino una herramienta para explorar atención, propósito y narrativa. Todo desplegado gratis (GitHub Pages) y documentado con procesos abiertos.</p>
+        <div class="cta">
+          <a class="btn primary" href="#proyectos">Ver proyectos</a>
+          <a class="btn" href="#setup">Cómo está hecho</a>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <span class="tag">Stack gratuito</span>
+          <h3 style="margin:.6em 0 .2em">Tecnologías utilizadas</h3>
+          <ul class="muted" style="line-height:1.9; padding-left:18px">
+            <li>HTML + CSS + JS (vanilla)</li>
+            <li>Git & GitHub · GitHub Pages (hosting gratis)</li>
+            <li>FFmpeg · Whisper · Stable Diffusion (local)</li>
+            <li>n8n (automatizaciones) · CapCut / DaVinci Resolve Free</li>
+          </ul>
+          <p class="small muted">*Todo puede replicarse sin coste y sin créditos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos">
+      <h2>Proyectos</h2>
+      <p class="muted">Selección de trabajos con IA aplicada (automatización, imagen/vídeo y campañas con propósito). Cada ficha enlaza a su repo o caso de estudio.</p>
+      <div class="card-grid" id="projects"></div>
+    </section>
+
+    <section id="acerca">
+      <h2>Acerca</h2>
+      <div class="grid-2">
+        <div class="card">
+          <p>Soy Lucía. Estudio Publicidad y Marketing. Me interesa la intersección entre **IA y dirección creativa**, con foco en <strong>automatizaciones útiles</strong>, <strong>imagen/vídeo con narrativa</strong> y <strong>campañas con ética</strong>. Busco que cada proyecto tenga propósito.</p>
+          <p class="muted">Valores: claridad, responsabilidad, curiosidad, profundidad.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Servicios / Colaboraciones</h3>
+          <ul class="muted" style="line-height:1.9; padding-left:18px">
+            <li>Sistemas IA para contenido (curación, resumen, etiquetado)</li>
+            <li>Dirección de arte generativa (SDXL, workflows)</li>
+            <li>Vídeo-poema / micro-documental con IA</li>
+            <li>Campañas con propósito (insight + experimento)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="cv">
+      <h2>CV / Destacados</h2>
+      <div class="card-grid" id="cvgrid"></div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form class="card" name="contact">
+        <label class="sr" for="name">Nombre</label>
+        <input class="input" id="name" name="name" placeholder="Tu nombre" required>
+        <label class="sr" for="email">Email</label>
+        <input class="input" id="email" name="email" placeholder="tu@email.com" type="email" required>
+        <label class="sr" for="msg">Mensaje</label>
+        <textarea id="msg" rows="4" placeholder="Cuéntame tu idea o proyecto…" required></textarea>
+        <button class="btn primary" type="submit">Enviar</button>
+        <p class="small muted">Este formulario es de ejemplo. En GitHub Pages puedes usar <strong>Formspree</strong> o <strong>Netlify Forms</strong> gratis.</p>
+      </form>
+    </section>
+
+    <section id="setup">
+      <h2>Cómo está hecho (gratis)</h2>
+      <div class="card">
+        <ol style="line-height:1.9; padding-left:18px">
+          <li>Clona este repo / archivo en tu GitHub.</li>
+          <li>Activa <strong>GitHub Pages</strong> en Settings → Pages → deploy from <em>main</em>.</li>
+          <li>Edita el array <code>DATA.projects</code> y <code>DATA.cv</code> para cargar tu contenido.</li>
+          <li>Arrastra tus imágenes a <code>/assets</code> (crea la carpeta) y enlázalas en los objetos.</li>
+          <li>Personaliza colores en <code>:root</code> y textos de secciones.</li>
+        </ol>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Lucía López — Hecho con HTML/CSS/JS + GitHub Pages (gratis)
+    </footer>
+  </div>
+
+  <script>
+    const DATA = {
+      projects: [
+        {
+          title: "Vídeo-poema · Atención digital",
+          tag: "Vídeo IA",
+          cover: "assets/cover-videopoema.jpg",
+          link: "#",
+          blurb: "Pieza breve que combina SDXL (imágenes), Whisper (transcripción), Coqui TTS (voz) y montaje en CapCut Free.",
+        },
+        {
+          title: "Sistema de curación IA (n8n)",
+          tag: "Automatización",
+          cover: "assets/cover-curacion.jpg",
+          link: "#",
+          blurb: "Pipeline que guarda artículos, resume con LLM local (Ollama) y etiqueta en Notion/Sheets.",
+        },
+        {
+          title: "Dirección de arte generativa (SDXL)",
+          tag: "Imagen IA",
+          cover: "assets/cover-arte.jpg",
+          link: "#",
+          blurb: "Exploración de paletas y composición con ControlNet y LoRAs propios (entrenados con Kohya).",
+        }
+      ],
+      cv: [
+        { title:"Doble Grado · Publicidad & Marketing", tag:"Formación", blurb:"UPSA / UVigo · Dirección creativa y estrategia.", link:"#" },
+        { title:"Investigación personal: IA con propósito", tag:"Línea", blurb:"Ética de la atención, persuasión responsable y diseño de sistemas.", link:"#" },
+        { title:"Proyectos freelance / colaboraciones", tag:"Experiencia", blurb:"Sistemas IA, branding y piezas audiovisuales.", link:"#" }
+      ]
+    };
+
+    const $projects = document.getElementById('projects');
+    const $cv = document.getElementById('cvgrid');
+
+    function card({title, tag, cover, link, blurb}){
+      return `
+      <article class="card">
+        <a href="${link}" target="_blank" rel="noopener">
+          <div class="thumb">${cover ? `<img src="${cover}" alt="${title}" style="width:100%;height:100%;object-fit:cover;border-radius:12px">` : 'Sin imagen'}</div>
+          <span class="tag">${tag}</span>
+          <h3 style="margin:.5em 0 .2em">${title}</h3>
+          <p class="muted small">${blurb}</p>
+        </a>
+      </article>`
+    }
+
+    function pill({title, tag, blurb, link}){
+      return `
+      <article class="card">
+        <a href="${link}" target="_blank" rel="noopener">
+          <span class="tag">${tag}</span>
+          <h3 style="margin:.5em 0 .2em">${title}</h3>
+          <p class="muted small">${blurb}</p>
+        </a>
+      </article>`
+    }
+
+    $projects.innerHTML = DATA.projects.map(card).join('');
+    $cv.innerHTML = DATA.cv.map(pill).join('');
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
